@@ -4,3 +4,32 @@
     font-weight: 700;
     src: url(fonts/PlayfairDisplay-Bold.woff) format("woff"), url(fonts/PlayfairDisplay-Bold.woff2) format("woff2"), url(fonts/PlayfairDisplay.ttf) format("truetype");
 }
+
+.welcome_block,
+header {
+    background: #9999FF;
+}
+
+.nav-item {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.nav-link {
+    color: #FFFFCC;
+}
+
+.welcome_block_text {
+    color: #FFFFCC;
+    text-align: center;
+    margin: auto;
+}
+
+.welcome_text_hi {
+    font-size: 96px;
+    font-weight: 700;
+}
+
+.welcome_text_description {
+    font-size: 34px;
+}
