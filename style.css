@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "PlayfireDisplay";
+    font-style: bold;
+    font-weight: 700;
+    src: url(fonts/PlayfairDisplay-Bold.woff) format("woff"), url(fonts/PlayfairDisplay-Bold.woff2) format("woff2"), url(fonts/PlayfairDisplay.ttf) format("truetype");
+}
