@@ -1,35 +1,93 @@
 @font-face {
-    font-family: "PlayfireDisplay";
-    font-style: bold;
-    font-weight: 700;
-    src: url(fonts/PlayfairDisplay-Bold.woff) format("woff"), url(fonts/PlayfairDisplay-Bold.woff2) format("woff2"), url(fonts/PlayfairDisplay.ttf) format("truetype");
+    font-family: NeueMachina Light;
+    src: url(fonts/NeueMachina-Light.otf);
 }
 
-.welcome_block,
-header {
-    background: #9999FF;
+@font-face {
+    font-family: NeueMachina Bold;
+    src: url(fonts/NeueMachina-Ultrabold.otf);
+}
+
+
+/* Основные-общие настройки */
+
+body {
+    font-family: NeueMachina Bold;
+    background-color: black;
+    font-size: 16px;
+    line-height: 1;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+
+/* Основные-общие настройки */
+
+
+/*Навигация*/
+
+.nav {
+    list-style-type: none;
+    text-align: center;
 }
 
 .nav-item {
-    font-size: 20px;
-    padding: 10px;
+    display: inline;
+}
+
+.nav-item a:hover {
+    border-radius: 15px;
+    background-color: white;
+    color: black;
 }
 
 .nav-link {
-    color: #FFFFCC;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px 10px;
+    color: white;
 }
 
-.welcome_block_text {
-    color: #FFFFCC;
-    text-align: center;
-    margin: auto;
+
+/*Навигация*/
+
+
+/*Приветственный блок*/
+
+.welcome_block {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
 }
 
-.welcome_text_hi {
-    font-size: 96px;
-    font-weight: 700;
+.welcome_image {
+    width: 50%;
 }
 
-.welcome_text_description {
-    font-size: 34px;
+.welcome_image img {
+    width: 70%;
+    float: right;
 }
+
+.welcome_text {
+    width: 50%;
+    margin-top: 150px;
+}
+
+.welcome_text h2 {
+    font-size: 68px;
+}
+
+.welcome_text p {
+    font-size: 36px;
+}
+
+
+/*Приветственный блок*/
