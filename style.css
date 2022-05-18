@@ -37,17 +37,17 @@ body {
     text-align: center;
 }
 
-.nav-item {
+.nav__item {
     display: inline;
 }
 
-.nav-item a:hover {
+.nav__item a:hover {
     border-radius: 15px;
     background-color: white;
     color: black;
 }
 
-.nav-link {
+.nav__link {
     text-decoration: none;
     margin-left: 50px;
     margin-right: 50px;
@@ -61,31 +61,46 @@ body {
 
 /*Приветственный блок*/
 
-.welcome_block {
+.welcome {
     display: flex;
     margin-top: 50px;
     justify-content: center;
 }
 
-.welcome_image {
+.planet {
     width: 50%;
+    position: relative;
+    display: block;
 }
 
-.welcome_image img {
-    width: 70%;
+.planet__map {
+    width: 400px;
+    height: 800px;
     float: right;
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    border: 3px solid black;
+    background: url(images/moon_image.jpg);
+    background-size: cover;
+    box-shadow: -30px -30px 40px 10px black inset;
+    animation: spin 90s linear infinite;
 }
 
-.welcome_text {
+@keyframes spin {
+    100% {
+        background-position: -100%;
+    }
+}
+
+.welcome__text {
     width: 50%;
     margin-top: 150px;
 }
 
-.welcome_text h2 {
+.welcome__text h2 {
     font-size: 68px;
 }
 
-.welcome_text p {
+.welcome__text p {
     font-size: 36px;
 }
 
