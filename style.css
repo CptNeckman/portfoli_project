@@ -13,10 +13,10 @@
 
 body {
     font-family: NeueMachina Bold;
-    background-color: black;
     font-size: 16px;
     line-height: 1;
     color: white;
+    background: #000200;
 }
 
 .container {
@@ -33,6 +33,7 @@ body {
 /*Навигация*/
 
 .nav {
+    position: relative;
     list-style-type: none;
     text-align: center;
 }
@@ -51,7 +52,7 @@ body {
     text-decoration: none;
     margin-left: 50px;
     margin-right: 50px;
-    padding: 10px 10px;
+    padding: 5px 5px;
     color: white;
 }
 
@@ -61,16 +62,14 @@ body {
 
 /*Приветственный блок*/
 
-.welcome {
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
-}
-
-.planet {
+.welcome_planet {
     width: 50%;
     position: relative;
     display: block;
+}
+
+.welcome .container {
+    display: flex;
 }
 
 .planet__map {
@@ -78,10 +77,10 @@ body {
     height: 800px;
     float: right;
     border-radius: 100% 0 0 100% / 50% 0 0 50%;
-    border: 3px solid black;
+    border: 1px solid black;
     background: url(images/moon_image.jpg);
     background-size: cover;
-    box-shadow: -30px -30px 40px 10px black inset;
+    box-shadow: -30px -30px 50px 30px black inset;
     animation: spin 90s linear infinite;
 }
 
@@ -90,6 +89,193 @@ body {
         background-position: -100%;
     }
 }
+
+
+/* Space */
+
+.welcome {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: animate 25s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        opacity: 0;
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        opacity: 1;
+    }
+}
+
+.space_1 {
+    animation-delay: 0s;
+    background: url(images/space/space1.png);
+}
+
+.space_2 {
+    animation-delay: -1s;
+    background: url(images/space/space2.png);
+}
+
+.space_3 {
+    animation-delay: -2s;
+    background: url(images/space/space3.png);
+}
+
+.space_4 {
+    animation-delay: -3s;
+    background: url(images/space/space4.png);
+}
+
+.space_6 {
+    animation-delay: -4s;
+    background: url(images/space/space6.png);
+}
+
+.space_6 {
+    animation-delay: -5s;
+    background: url(images/space/space6.png);
+}
+
+.space_7 {
+    animation-delay: -6s;
+    background: url(images/space/space7.png);
+}
+
+.space_8 {
+    animation-delay: -7s;
+    background: url(images/space/space8.png);
+}
+
+
+/* Space */
+
+
+/* Звезды */
+
+.star {
+    position: absolute;
+    height: 4px;
+    width: 100px;
+    background: linear-gradient(-45deg, #eaeef8, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px #699BFF);
+    animation: tail 3s ease-in-out infinite, falling 3s ease-in-out infinite;
+}
+
+.star::before,
+.star::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 0;
+    height: 4px;
+    width: 30px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #eaeef8, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 3s ease-in-out infinite;
+}
+
+.star::after {
+    transform: translateX(50%) rotateZ(-45deg);
+}
+
+.star__block_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateZ(120deg);
+}
+
+.star_1 {
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    animation-delay: 1s;
+}
+
+.star_1::before,
+.star_1::after {
+    animation-delay: 1s;
+}
+
+.star__block_2 {
+    position: relative;
+    transform: rotateZ(150deg);
+    top: 0;
+}
+
+.star_2 {
+    top: calc(50% - 100px);
+    right: 0;
+    animation-delay: 2s;
+}
+
+.star_2::before,
+.star_2::after {
+    animation-delay: 1s;
+}
+
+@keyframes tail {
+    0% {
+        width: 0px;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+@keyframes falling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+@keyframes shining {
+    0% {
+        width: 30px;
+    }
+    30% {
+        width: 0px;
+    }
+    100% {
+        width: 30px;
+    }
+}
+
+
+/* Звезды */
 
 .welcome__text {
     width: 50%;
@@ -106,3 +292,8 @@ body {
 
 
 /*Приветственный блок*/
+
+.about {
+    display: block;
+    background-color: white;
+}
