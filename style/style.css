@@ -3,6 +3,9 @@
     src: url(../fonts/QuartzoBold.ttf);
 }
 
+
+/* Main */
+
 nav,
 body {
     margin: 0;
@@ -15,6 +18,12 @@ body {
     min-height: 100%;
     background: linear-gradient( #1b0a68, #3983ee);
 }
+
+
+/* Main -end-*/
+
+
+/* Header */
 
 header {
     -webkit-animation-duration: 6s;
@@ -240,3 +249,6 @@ nav {
     animation-delay: -7s;
     background: url(../images/stars/star_8.png);
 }
+
+
+/* Header -end- */
